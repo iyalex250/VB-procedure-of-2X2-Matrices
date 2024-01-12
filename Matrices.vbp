@@ -1,0 +1,50 @@
+'a procedure to compute 2x2 matrices
+' powered by @iyalex
+
+Private Sub btnmatrix_Click()
+Dim x(2, 2) As Integer
+Dim y(2, 2) As Integer
+Dim z(2, 2) As Integer
+Dim p As Integer
+Dim q As Integer
+Dim r As Integer
+For p = 1 To 2
+For q = 1 To 2
+x(p, q) = Val(InputBox("Enter Elements of matrix A"))
+Next q
+Next p
+For p = 1 To 2
+For q = 1 To 2
+y(p, q) = Val(InputBox("Enter Elements of matrix B"))
+Next q
+Next p
+Print "A Matrix is"
+For p = 1 To 2
+For q = 1 To 2
+Print x(p, q);
+Next q
+Print " "
+Next p
+Print "B Matrix is "
+For p = 1 To 2
+For q = 1 To 2
+Print y(p, q);
+Next q
+Print " "
+Next p
+For p = 1 To 2
+For q = 1 To 2
+z(p, q) = 0
+For r = 1 To 2
+z(p, q) = z(p, q) + x(p, r) * y(r, q)
+Next r
+Next q
+Next p
+Print "Multiplication Of Two Matrix is "
+For p = 1 To 2
+For q = 1 To 2
+Print z(p, q);
+Next q
+Print " "
+Next p
+End Sub
